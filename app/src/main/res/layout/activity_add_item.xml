@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Item:"
+        android:textSize="27sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemNameEdit"
+        android:hint="Item Name"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemQtyEdit"
+        android:hint="Quantity"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemExpiryEdit"
+        android:hint="Expiry (DD-MM-YYYY)"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveItemBtn"
+        android:text="Add Item"
+        android:backgroundTint="@color/orange_700"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp"/>
+</LinearLayout>
