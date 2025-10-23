@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:padding="24dp"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
@@ -27,6 +28,11 @@
         android:background="@drawable/rounded_edittext"
         android:padding="12dp"
         android:layout_marginTop="16dp"/>
+    <Spinner
+        android:id="@+id/unitSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

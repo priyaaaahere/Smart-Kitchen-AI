@@ -17,22 +17,19 @@ class SettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
         val logOutButton = view.findViewById<Button>(R.id.logoutBtn)
         val fb = FirebaseAuth.getInstance()
 
         logOutButton.setOnClickListener {
-            // logout the user
+            // Sign out the user
             fb.signOut()
-            // move to login page
-            val intent = Intent(activity, LoginActivity::class.java)
+
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
-            activity?.finish()
         }
 
-
         return view
-
     }
 }
