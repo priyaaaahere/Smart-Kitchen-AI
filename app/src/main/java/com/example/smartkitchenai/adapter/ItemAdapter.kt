@@ -28,7 +28,7 @@ class ItemAdapter(private val itemList: MutableList<Item>) :
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val currentItem = itemList[position]
         holder.itemName.text = currentItem.name
-        holder.itemQty.text = "Qty: ${currentItem.quantity}"
+        holder.itemQty.text = "Qty: ${currentItem.quantity} ${currentItem.unit}"
         holder.itemExpiry.text = "Expires: ${currentItem.expiryDate}"
 
         holder.itemView.setOnLongClickListener {
