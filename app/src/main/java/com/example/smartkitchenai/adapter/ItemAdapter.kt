@@ -41,7 +41,6 @@ class ItemAdapter(private val itemList: MutableList<Item>) :
                     .addOnSuccessListener {
                         itemList.removeAt(position)
                         notifyItemRemoved(position)
-                        notifyItemRangeChanged(position, itemList.size)
                     }
             }
             true

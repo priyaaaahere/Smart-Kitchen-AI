@@ -47,6 +47,12 @@ class AddItemActivity : AppCompatActivity() {
             return
         }
 
+        val datePattern = Regex("^\\d{2}-\\d{2}-\\d{4}$")
+        if (!expiryDate.matches(datePattern)) {
+            Toast.makeText(this, "Enter expiry as DD-MM-YYYY", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val userId = auth.currentUser?.uid
         if (userId == null) {
             Toast.makeText(this, "You are not logged in!", Toast.LENGTH_SHORT).show()

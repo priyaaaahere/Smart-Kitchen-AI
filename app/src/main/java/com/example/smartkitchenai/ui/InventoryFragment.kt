@@ -43,7 +43,6 @@ class InventoryFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        loadItemsFromFirestore()
     }
 
     private fun setupRecyclerView() {
@@ -66,16 +65,21 @@ class InventoryFragment : Fragment() {
                     return@addSnapshotListener
                 }
 
-                if (snapshots != null) {
+                if (snapshots == null) {
                     itemList.clear()
-                    for (doc in snapshots) {
-                        val item = doc.toObject(com.example.smartkitchenai.data.Item::class.java)
-                        item.id = doc.id
-                        itemList.add(item)
-                    }
                     itemAdapter.notifyDataSetChanged()
+                    return@addSnapshotListener
                 }
+
+                itemList.clear()
+                for (doc in snapshots) {
+                    val item = doc.toObject(Item::class.java)
+                    item.id = doc.id
+                    itemList.add(item)
+                }
+                itemAdapter.notifyDataSetChanged()
             }
+
     }
 
 
