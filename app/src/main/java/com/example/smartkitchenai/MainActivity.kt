@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.smartkitchenai.ui.AIChatFragment
 import com.example.smartkitchenai.ui.InventoryFragment
+import com.example.smartkitchenai.ui.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
 
