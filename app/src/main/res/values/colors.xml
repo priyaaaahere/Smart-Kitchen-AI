@@ -7,7 +7,9 @@
     <color name="green_accent">#43A047</color>
     <color name="orange_light">#FFB74D</color>
     <color name="orange_700">#F57C00</color>
+    <color name="orange_500">#FF6D00</color>
 
+    <color name="gray_500">#9E9E9E</color>
     <!-- Custom additional colors -->
     <color name="red">#E53935</color>          <!-- Aesthetic red (material style) -->
     <color name="red_light">#FFCDD2</color>    <!-- Softer tone for backgrounds -->

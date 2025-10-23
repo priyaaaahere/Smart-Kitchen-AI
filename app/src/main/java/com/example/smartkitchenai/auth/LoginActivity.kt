@@ -24,13 +24,14 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        enableEdgeToEdge()
 
         auth = FirebaseAuth.getInstance()
 
-        emailEdit = findViewById(R.id.emailEdit)
-        passEdit = findViewById(R.id.passEdit)
+        emailEdit = findViewById(R.id.emailInput)
+        passEdit = findViewById(R.id.passwordInput)
         loginBtn = findViewById(R.id.loginBtn)
-        goSignup = findViewById(R.id.goSignup)
+        goSignup = findViewById(R.id.signupLink)
 
         loginBtn.setOnClickListener {
             val email = emailEdit.text.toString().trim()

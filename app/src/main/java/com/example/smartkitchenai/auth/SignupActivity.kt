@@ -24,17 +24,27 @@ class SignupActivity : AppCompatActivity() {
 
         auth=FirebaseAuth.getInstance()
 
-        val emailEdit=findViewById<EditText>(R.id.emailEdit)
-        val passEdit = findViewById<EditText>(R.id.passEdit)
+        val nameEdit=findViewById<EditText>(R.id.fullNameInput)
+        val emailEdit=findViewById<EditText>(R.id.emailInput)
+        val passEdit = findViewById<EditText>(R.id.passwordInput)
+        val confPassEdit = findViewById<EditText>(R.id.confirmPasswordInput)
         val signupBtn = findViewById<Button>(R.id.signupBtn)
-        val goLogin = findViewById<TextView>(R.id.goSignup)
+        val goLogin = findViewById<TextView>(R.id.loginLink)
 
         signupBtn.setOnClickListener {
+            val name = nameEdit.text.toString().trim()
             val email = emailEdit.text.toString().trim()
             val password = passEdit.text.toString().trim()
+            val confirmPassword = confPassEdit.text.toString().trim()
 
-            if (email.isEmpty() || password.isEmpty()) {
+
+            if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if(password!=confirmPassword) {
+                Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
