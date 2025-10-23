@@ -38,9 +38,14 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(AIChatFragment())
                     true
                 }
+                R.id.navigation_settings -> {
+                    loadFragment(SettingsFragment())
+                    true
+                }
                 else -> false
             }
         }
+
     }
 
     /**
