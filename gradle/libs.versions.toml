@@ -13,6 +13,8 @@ constraintlayout = "2.2.1"
 googleServices = "4.4.2"
 firebaseAuth = "23.1.0"
 firebaseFirestore = "25.1.0"
+#gemini ai
+generativeai = "0.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,9 +28,12 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 #Firebase
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+#gemini ai
+generativeai = { group = "com.google.ai.client.generativeai", name = "generativeai", version.ref = "generativeai" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 #For firebase
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+
