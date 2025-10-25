@@ -28,7 +28,7 @@ import kotlinx.coroutines.withContext
 
 class AIChatFragment : Fragment() {
 
-    private val key = "AIzaSyAbdmAR_mCE67foExIJf9sNVZIhbzQUO7U"
+    private val key = ""
 
     private lateinit var messageContainer: LinearLayout
     private lateinit var messageInput: EditText
