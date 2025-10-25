@@ -11,6 +11,7 @@
 
     <RelativeLayout
         android:id="@+id/topBar"
+        android:background="@color/orange_500"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:paddingStart="16dp"
@@ -24,7 +25,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
-            app:tint="#4A4A4A" />
+            app:tint="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,7 +33,7 @@
             android:text="AI Chef"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#333333"
+            android:textColor="@color/white"
             android:layout_centerInParent="true" />
 
         <TextView
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Chat"
-            android:textColor="@color/orange_500"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
