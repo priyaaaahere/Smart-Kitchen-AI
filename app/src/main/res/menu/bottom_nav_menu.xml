@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/navigation_inventory"
+        android:title="Inventory"
+        android:icon="@drawable/ic_inventory_box"/>
+    <item android:id="@+id/navigation_ai"
+        android:title="AI Chat"
+        android:icon="@drawable/ic_chat"/>
+    <item android:id="@+id/navigation_settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings"/>
+</menu>

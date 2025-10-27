@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chatLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/orange_700"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Chef"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/newChatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Chat"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp"/>
+    </RelativeLayout>
+
+    <!-- Suggestion Chips -->
+    <HorizontalScrollView
+        android:id="@+id/suggestionScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:scrollbars="none"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/suggestionChip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What items do I have in inventory?"
+                android:background="@drawable/bg_suggestion_chip"
+                android:padding="10dp"
+                android:textColor="#D97706"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/suggestionChip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What do I need to buy to make chicken curry?"
+                android:background="@drawable/bg_suggestion_chip"
+                android:padding="10dp"
+                android:textColor="#D97706"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/suggestionChip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do I have coconut in my inventory?"
+                android:background="@drawable/bg_suggestion_chip"
+                android:padding="10dp"
+                android:textColor="#D97706"
+                android:layout_marginEnd="8dp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Chat messages container -->
+    <ScrollView
+        android:id="@+id/chatScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/suggestionScrollView"
+        android:layout_above="@id/inputArea"
+        android:scrollbars="none"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/messageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Message input area -->
+    <LinearLayout
+        android:id="@+id/inputArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chat_input_bar"
+            android:elevation="4dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/sendButton"
+                android:layout_centerVertical="true"
+                android:hint="Ask your AI Chef..."
+                android:background="@android:color/transparent"
+                android:padding="12dp"
+                android:textColor="#333333"
+                android:textSize="16sp"/>
+
+            <ImageButton
+                android:id="@+id/sendButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_send_button"
+                android:src="@drawable/ic_send"
+                app:tint="@color/white"
+                android:scaleType="center"
+                android:contentDescription="Send"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Start Chat Overlay -->
+    <LinearLayout
+        android:id="@+id/startChatLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_gradient">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to AI Chef"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange_700"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/startChatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Chat"
+            android:backgroundTint="@color/orange_700"
+            android:textColor="@color/white"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

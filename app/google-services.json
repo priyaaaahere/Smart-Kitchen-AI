@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1064784861455",
+    "project_id": "smartkitchenai-faa09",
+    "storage_bucket": "smartkitchenai-faa09.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064784861455:android:0064e1de6c77254935467a",
+        "android_client_info": {
+          "package_name": "com.example.smartkitchenai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6_vHHH01sWmHpElEsoQXNzSk15a3ZZDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

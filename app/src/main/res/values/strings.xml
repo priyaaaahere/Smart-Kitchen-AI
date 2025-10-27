@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SmartKitchenAI</string>
+    <string-array name="spinner_items">
+        <item>Grams</item>
+        <item>Kilo grams</item>
+        <item>Unit</item>
+    </string-array>
+</resources>
