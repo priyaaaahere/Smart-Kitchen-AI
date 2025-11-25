@@ -9,7 +9,6 @@
     android:padding="24dp"
     android:background="@drawable/bg_gradient">
 
-    <!-- Logo -->
     <ImageView
         android:id="@+id/logoImage"
         android:layout_width="120dp"
@@ -18,7 +17,6 @@
         android:contentDescription="App Logo"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Full Name Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +40,6 @@
             android:textColorHint="@color/gray_500"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Email Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,7 +64,6 @@
             android:textColorHint="@color/gray_500"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Password Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,7 +89,6 @@
             android:textColorHint="@color/gray_500"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Confirm Password Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,7 +123,6 @@
         android:textColor="@color/white"
         />
 
-    <!-- Login Link -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"

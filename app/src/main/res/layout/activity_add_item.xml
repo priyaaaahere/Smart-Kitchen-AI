@@ -7,7 +7,6 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/bg_gradient">
-    <!-- Top Bar -->
     <RelativeLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
@@ -34,7 +33,6 @@
             android:layout_centerInParent="true"/>
     </RelativeLayout>
 
-    <!-- Scrollable content inside a card -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -52,7 +50,6 @@
             android:layout_marginTop="30dp"
             android:clipToOutline="true">
 
-            <!-- Item Name -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
@@ -74,7 +71,6 @@
                     android:textColor="@android:color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Quantity -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
@@ -95,7 +91,6 @@
                     android:textColor="@android:color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Unit -->
             <Spinner
                 android:id="@+id/unitSpinner"
                 android:layout_width="match_parent"
@@ -105,7 +100,6 @@
                 android:layout_marginBottom="16dp"
                 android:spinnerMode="dropdown" />
 
-            <!-- Expiry -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
@@ -122,11 +116,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Expiry (DD-MM-YYYY)"
-                    android:inputType="date"
                     android:textColor="@android:color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Add Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/saveItemBtn"
                 style="@style/Widget.MaterialComponents.Button"

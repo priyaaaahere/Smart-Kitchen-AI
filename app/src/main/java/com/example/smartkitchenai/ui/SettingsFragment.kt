@@ -60,7 +60,7 @@ class SettingsFragment : Fragment() {
             startActivity(intent)
         }
 
-        footerText.text = "Made with 💓 by Priyadarshini"
+        footerText.text = "Made with 💓 by Priya"
 
         return view
     }

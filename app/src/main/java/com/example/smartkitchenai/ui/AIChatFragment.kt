@@ -88,7 +88,6 @@ class AIChatFragment : Fragment() {
         return view
     }
 
-    /** Adds message bubble and scrolls smoothly */
     private fun addMessage(message: String, isUser: Boolean) {
         val layoutId = if (isUser) R.layout.item_user_message else R.layout.item_ai_message
         val view = layoutInflater.inflate(layoutId, messageContainer, false)
@@ -101,7 +100,6 @@ class AIChatFragment : Fragment() {
         }
     }
 
-    /** Adds error message with reload button */
     private fun addErrorMessage(message: String, prompt: String) {
         val errorLayout = LinearLayout(requireContext()).apply {
             orientation = LinearLayout.HORIZONTAL
@@ -133,7 +131,6 @@ class AIChatFragment : Fragment() {
         chatScrollView.post { chatScrollView.fullScroll(View.FOCUS_DOWN) }
     }
 
-    /** Sends message to AI with typing animation */
     private fun sendMessageToGemini(prompt: String) {
         // Show typing indicator
         val typingView = layoutInflater.inflate(R.layout.item_ai_typing, messageContainer, false)
@@ -178,7 +175,6 @@ class AIChatFragment : Fragment() {
         }
     }
 
-    /** Load user inventory from Firestore */
     private fun loadItemsFromFirestore(onComplete: () -> Unit) {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
         if (userId == null) {
@@ -203,7 +199,6 @@ class AIChatFragment : Fragment() {
             }
     }
 
-    /** * Generates the first Gemini prompt based on inventory */
     private fun generateInventoryPrompt(): String {
         if (itemList.isEmpty()) {
             return """ You are SmartKitchenAI, an intelligent cooking assistant. Currently, the user's inventory is empty. Greet the user warmly and say: "Hey, what do you want to cook today?" """.trimIndent()

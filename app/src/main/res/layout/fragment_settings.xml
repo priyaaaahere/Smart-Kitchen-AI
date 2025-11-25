@@ -7,7 +7,6 @@
     android:background="@drawable/bg_gradient"
     >
 
-    <!-- Top Bar -->
     <RelativeLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
@@ -34,7 +33,6 @@
             android:layout_centerInParent="true"/>
     </RelativeLayout>
 
-    <!-- Scrollable stats -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -48,7 +46,6 @@
             android:orientation="vertical"
             android:spacing="12dp">
 
-            <!-- User Email Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,7 +77,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Total Items Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -112,7 +108,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Expired Items Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -144,7 +139,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- App Version Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -179,13 +173,12 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Fixed Logout Button -->
 
     <TextView
         android:id="@+id/footerText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Made with 💓 by Priyadarshini"
+        android:text="Made with 💓 by Priya"
         android:textSize="14sp"
         android:textColor="@android:color/darker_gray"
         android:layout_marginBottom="10dp"

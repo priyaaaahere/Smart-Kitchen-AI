@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Top Bar -->
     <RelativeLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
@@ -48,7 +47,6 @@
             android:padding="8dp"/>
     </RelativeLayout>
 
-    <!-- Suggestion Chips -->
     <HorizontalScrollView
         android:id="@+id/suggestionScrollView"
         android:layout_width="match_parent"
@@ -97,7 +95,6 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <!-- Chat messages container -->
     <ScrollView
         android:id="@+id/chatScrollView"
         android:layout_width="match_parent"
@@ -114,7 +111,6 @@
             android:orientation="vertical" />
     </ScrollView>
 
-    <!-- Message input area -->
     <LinearLayout
         android:id="@+id/inputArea"
         android:layout_width="match_parent"
@@ -159,7 +155,6 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <!-- Start Chat Overlay -->
     <LinearLayout
         android:id="@+id/startChatLayout"
         android:layout_width="match_parent"
